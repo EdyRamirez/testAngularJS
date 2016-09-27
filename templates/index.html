@@ -1,0 +1,27 @@
+<!--si no hay usuarios que mostrar, con la directiva ng-show comprobamos
+el array client y mostramos un mensaje-->
+<div class="row" ng-show="client.length == 0">
+
+    <div class="alert alert-warning">
+        <h4>No hay usuarios para mostrar</h4>
+    </div>
+</div>
+<!--como nuestros usuarios no tienen id, la forma de poder eliminarlos es recorriendo
+el array añadiendo la clave id, así podremos saber a cuál hacer referencia, de esta forma
+al añadir usuarios y no tener definida su id, angularjs le asignará la siguiente al último usuario
+existente, es decir, un campo autoincremental-->
+    <div class="contact-item" ng-repeat="(id,item) in client">
+        <div class="col-lg-4">
+            <div class="row contact-box">
+                <div class="col-sm-12">
+                  <h3>
+                        <a href="#/info/user/{{id}}">
+                        {{item.person.name}}
+                        {{item.person.last_name}}
+                        {{item.person.second_last_name}}
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>

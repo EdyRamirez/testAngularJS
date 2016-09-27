@@ -1,0 +1,36 @@
+<div class="ibox col-sm-12">
+    <div class="ibox-title">
+        <h5>
+            Información del cliente :
+            <b>
+                {{ client.person.name }} {{ client.person.last_name }} {{ client.person.second_last_name }}
+            </b>
+        </h5>
+    </div>
+    <div class="ibox-content">
+        <div class="pull-right">
+            <a href="#/add/car/user/{{id}}" class="btn btn-white btn-sm">Agregar Automovil <i class="fa fa-plus"></i> </a>
+        </div>
+        <h3>Mis Autos</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-group clear-list col-md-6" >
+                    <li ng-repeat="vehicle in client.car"  class="list-group-item">
+                        <i class="fa fa-car"></i>
+                        {{vehicle.mark}}
+                        {{vehicle.model}}
+                        {{vehicle.year}}
+                        {{vehicle.color}}
+                        <div class="pull-right">
+                            <a href="#/remove/car/{{client.car.indexOf(vehicle)}}/user/{{id}}" class="btn btn-white btn-sm">
+                                <i class="fa fa-trash-o"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

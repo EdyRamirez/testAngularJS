@@ -1,0 +1,8 @@
+<!--aquí simplemente tenemos la opción de eliminar -->
+<div class="alert alert-warning alert-dismissable">
+    <a href="#/info/user/{{user}}" class="close" type="button">×</a>
+    Deseas eliminar este automivil. <a class="alert-link">{{car.mark }} {{car.model }} {{car.year }} {{car.color}} </a>.
+    <!--asociamos a la directiva ng-click la función removeCar,
+    que lo que hace es eliminar del array -->
+    <a ng-click="removeCar()"  class=" btn btn-danger">Eliminar</a>
+</div>

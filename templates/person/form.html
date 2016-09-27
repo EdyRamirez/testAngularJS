@@ -1,0 +1,34 @@
+<form name="addPersonForm">
+    <fieldset>
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>{{ titleForm }}</h5>
+                <div class="ibox-tools">
+                    <a href="#/" class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="form-inline">
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input name="name" ng-model="newPerson.first_name" required type="text" placeholder="Ingresar Nombre" class="form-control">
+                        <span ng-show="!addPersonForm.$pristine && addPersonForm.name.$error.required">Name is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido Paterno</label>
+                        <input name="last_name" ng-model="newPerson.last_name" required type="text" placeholder="Ingresar Apellido Paterno"  class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido Materno</label>
+                        <input name="second_last_name" ng-model="newPerson.second_last_name" required type="text" placeholder="Ingresar Apellido Materno"  class="form-control">
+                    </div>
+
+                    <button type="submit"  class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>

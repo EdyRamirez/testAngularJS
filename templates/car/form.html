@@ -1,0 +1,42 @@
+<form name="addCardForm">
+    <fieldset>
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>{{ titleForm }}</h5>
+                <div class="ibox-tools">
+                    <a href="#/info/user/{{id}}" class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="form-inline">
+
+                    <div class="form-group">
+                        <label>Marca</label>
+                        <input name="mark" ng-model="newCar.mark" required type="text" placeholder="Ingresar una marca" class="form-control">
+                        <span ng-show="!addCarForm.$pristine && addCarForm.mark.$error.required">mark is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Modelo</label>
+                        <input name="model" ng-model="newCar.model" required type="text" placeholder="Ingresar un modelo" class="form-control">
+                        <span ng-show="!addCarForm.$pristine && addCarForm.model.$error.required">model is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Año</label>
+                        <input name="year" ng-model="newCar.year" required type="number" min="1960"  class="form-control">
+                        <span ng-show="!addCarForm.$pristine && addCarForm.year.$error.required">year is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Color</label>
+                        <input name="color" ng-model="newCar.color" required type="text" placeholder="Ingresar un color" class="form-control">
+                    </div>
+
+                    <button type="submit"  class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+
+    </fieldset>
+</form>
