@@ -1,5 +1,5 @@
 //creamos nuestro modulo llamado app
-var app = angular.module("app", []);
+var app = angular.module("app", ["ngRoute"]);
 
 //hacemos el ruteo de nuestra aplicación
 app.config(function($routeProvider){
